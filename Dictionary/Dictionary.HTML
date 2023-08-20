@@ -4,41 +4,88 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dictionary</title>
 	<style>
-		#Answer{
+		.Gender_box{
 			position: absolute;
-			width: calc(100vw - 85vw); 
-			height: calc(100vh - 95vh); 
+			top: calc(50% - 18px);
+			left: calc(50% - 200px);
+		}
+		#Gender_button{
+			width: 60px;
+			height: 40px;
+			background-color: grey;
+			color: white;
+			padding: 10px 15px;
+			border: none;
+			cursor: pointer;
+		}
+		.Gender_box a{
+			display: block;
+			color: black;
+			text-decoration: none;
+			padding: 10px 15px;
+		}
+		.Gender_box .content{
+			display: none;
+			position: absolute;
+			background-color: white;
+			min-width: 100px;
+			box-shadow: 2px 2px 5px black;
+	
+		}
+		.Gender_box:hover .content{
+			display: block;
+		}
+		.Gender_box:hover button{
+			background-color: white;
+		}
+		.Gender_box a:hover{
+			background-color: white;
+		}
+		#Answer_box{
+			position: absolute;
+			width: 200px; 
+			height: 50px; 
 			top: 50%;
 			left: 50%;
   			transform: translate(-50%, -50%);
 		}	
 	</style>
-
 </head>
 
 
 
 <body>
+	<div class="Gender_box">
+		<button id="Gender_button">Gender</button>
+		<div class="content">
+			<a href="" id="Der">der</a>
+			<a href="">die</a>
+			<a href="">das</a>
+		</div>
+	</div>
 
-<input id="Answer" type="text" placeholder="Answer" >
-
+	<input id="Answer_box" type="text" placeholder="Answer" >
 </body>
 
 
 
 <Script>
-	var Answer = "kecske";
+	var Answer;
 
-	document.getElementById("Answer").addEventListener("keydown", function(event) { 
+	document.getElementById("Answer_box").addEventListener("keydown", function(event) { 
 		
 		if(event.key === "Enter"){
-			var Answer = document.getElementById("Answer").value;
-			document.getElementById("Answer").value = "";
+			var Answer = document.getElementById("Answer_box").value;
+			document.getElementById("Answer_box").value = "";
 			console.log(Answer);
 		}
 	}
 	);
 	console.log(Answer);
+
+	document.getElementById("Der").onclick = function(){
+		console.log("Der")
+	}
 </Script>
 
-</html>
+</html> 
