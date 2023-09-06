@@ -1,0 +1,92 @@
+body{
+	background-color: rgb(24,24,24);
+}
+.Gender_box{
+	position: absolute;
+	top: calc(50% - 18px);
+	left: calc(50% - 200px);
+}
+#Gender_input{
+	width: 60px;
+	height: 40px;
+	background-color: rgb(24,24,24);
+	color: black;
+	padding: 5px;
+	cursor: pointer;
+	font-size: auto;
+}
+.Gender_box a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 10px 15px;
+}
+.Gender_box .content{
+	margin-left: -20px;
+	display: none;
+	position: absolute;
+	background-color: rgb(33,33,33);
+	min-width: 100px;
+	box-shadow: 2px 2px 5px black;
+
+}
+.Gender_box:hover .content{
+	display: block;
+}
+.Gender_box:hover input{
+	background-color: white;
+}
+.Gender_box a:hover{
+	background-color: grey;
+}
+#Answer_box{
+	background-color: rgb(24,24,24);
+	position: absolute;
+	width: 200px; 
+	height: 50px; 
+	top: 50%;
+	left: 50%;
+	  transform: translate(-50%, -50%);
+}
+
+
+
+
+.Plural_box{
+	position: absolute;
+	top: 44.5%;
+	left: calc(50% + 140px);
+}
+#Plural_input{
+	width: 60px;
+	height: 40px;
+	background-color: rgb(24,24,24);
+	color: black;
+	padding: 5px;
+	cursor: pointer;
+	font-size: auto;
+}
+.Plural_box a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 10px 15px;
+}
+.Plural_box .content{
+	margin-left: -20px;
+	display: none;
+	position: absolute;
+	background-color: rgb(33,33,33);
+	min-width: 100px;
+	box-shadow: 2px 2px 5px black;
+
+}
+.Plural_box:hover .content{
+	display: block;
+}
+.Plural_box:hover input{
+	background-color: white;
+}
+.Plural_box a:hover{
+	background-color: grey;
+}
