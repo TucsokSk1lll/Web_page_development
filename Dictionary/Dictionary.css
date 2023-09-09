@@ -3,14 +3,15 @@ body{
 }
 .Gender_box{
 	position: absolute;
-	top: calc(50% - 18px);
+	top: calc(60% - 18px);
 	left: calc(50% - 200px);
 }
 #Gender_input{
 	width: 60px;
 	height: 40px;
+	border-radius: 5px;
 	background-color: rgb(24,24,24);
-	color: black;
+	color: white;
 	padding: 5px;
 	cursor: pointer;
 	font-size: auto;
@@ -28,10 +29,6 @@ body{
 	background-color: rgb(33,33,33);
 	min-width: 100px;
 	box-shadow: 2px 2px 5px black;
-
-}
-.Gender_box:hover .content{
-	display: block;
 }
 .Gender_box:hover input{
 	background-color: white;
@@ -40,28 +37,31 @@ body{
 	background-color: grey;
 }
 #Answer_box{
+	color: white;
 	background-color: rgb(24,24,24);
 	position: absolute;
 	width: 200px; 
 	height: 50px; 
-	top: 50%;
+	border-radius: 5px;
+	top: 60%;
 	left: 50%;
-	  transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
-
 
 
 
 .Plural_box{
 	position: absolute;
-	top: 44.5%;
-	left: calc(50% + 140px);
+    top: calc(60%);
+	left: calc(50% + 170px);
+    transform: translate(-50%, -50%);
 }
 #Plural_input{
-	width: 60px;
+	width: 80px;
 	height: 40px;
+	border-radius: 5px;
 	background-color: rgb(24,24,24);
-	color: black;
+	color: 	white;
 	padding: 5px;
 	cursor: pointer;
 	font-size: auto;
@@ -81,11 +81,9 @@ body{
 	box-shadow: 2px 2px 5px black;
 
 }
-.Plural_box:hover .content{
-	display: block;
-}
 .Plural_box:hover input{
 	background-color: white;
+	
 }
 .Plural_box a:hover{
 	background-color: grey;
