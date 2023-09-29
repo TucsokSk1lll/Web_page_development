@@ -109,5 +109,132 @@ document.addEventListener("DOMContentLoaded", function() {
 		document.body.removeEventListener("click", Plural_box_arrows);
 	})
 
+
+
+
+
+
+
+
+
+
+	document.getElementById("-").addEventListener("mouseenter", function(event) {
+		document.getElementById("-").style.backgroundColor = "grey"
+		if(index >=0){
+			if(index != 0){
+				PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			}
+			index = -1;
+			console.log('set to default: ' + index);
+		}
+	});
+	document.getElementById("-").addEventListener("mouseleave", function(){
+		document.getElementById("-").style.backgroundColor = "rgb(33,33,33)";
+	})
+	document.getElementById("Umlaut").addEventListener("mouseenter", function(event) {
+		document.getElementById("Umlaut").style.backgroundColor = "grey"
+		if(index >=0){
+			if(index != 1){
+				PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			}
+			index = -1;
+			console.log('set to default: ' + index);
+		}
+	});
+	document.getElementById("Umlaut").addEventListener("mouseleave", function(){
+		document.getElementById("Umlaut").style.backgroundColor = "rgb(33,33,33)";
+	})
+	document.getElementById("-e").addEventListener("mouseenter", function(event) {
+		document.getElementById("-e").style.backgroundColor = "grey"
+		if(index >=0){
+			if(index != 2){
+				PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			}
+			index = -1;
+			console.log('set to default: ' + index);
+		}
+	});
+	document.getElementById("-e").addEventListener("mouseleave", function(){
+		document.getElementById("-e").style.backgroundColor = "rgb(33,33,33)";
+	})
+	document.getElementById("Umlaut -e").addEventListener("mouseenter", function(event) {
+		document.getElementById("Umlaut -e").style.backgroundColor = "grey"
+		if(index >=0){
+			if(index != 3){
+				PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			}
+			index = -1;
+			console.log('set to default: ' + index);
+		}
+	});
+	document.getElementById("Umlaut -e").addEventListener("mouseleave", function(){
+		document.getElementById("Umlaut -e").style.backgroundColor = "rgb(33,33,33)";
+	})
+	document.getElementById("-er").addEventListener("mouseenter", function(event) {
+		document.getElementById("-er").style.backgroundColor = "grey"
+		if(index >=0){
+			if(index != 4){
+				PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			}
+			index = -1;
+			console.log('set to default: ' + index);
+		}
+	});
+	document.getElementById("-er").addEventListener("mouseleave", function(){
+		document.getElementById("-er").style.backgroundColor = "rgb(33,33,33)";
+	})
+	document.getElementById("Umlaut -er").addEventListener("mouseenter", function(event) {
+		document.getElementById("Umlaut -er").style.backgroundColor = "grey"
+		if(index >=0){
+			if(index != 5){
+				PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			}
+			index = -1;
+			console.log('set to default: ' + index);
+		}
+	});
+	document.getElementById("Umlaut -er").addEventListener("mouseleave", function(){
+		document.getElementById("Umlaut -er").style.backgroundColor = "rgb(33,33,33)";
+	})
+	document.getElementById("-n").addEventListener("mouseenter", function(event) {
+		document.getElementById("-n").style.backgroundColor = "grey"
+		if(index >=0){
+			if(index != 6){
+				PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			}
+			index = -1;
+			console.log('set to default: ' + index);
+		}
+	});
+	document.getElementById("-n").addEventListener("mouseleave", function(){
+		document.getElementById("-n").style.backgroundColor = "rgb(33,33,33)";
+	})
+	document.getElementById("-en").addEventListener("mouseenter", function(event) {
+		document.getElementById("-en").style.backgroundColor = "grey"
+		if(index >=0){
+			if(index != 7){
+				PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			}
+			index = -1;
+			console.log('set to default: ' + index);
+		}
+	});
+	document.getElementById("-en").addEventListener("mouseleave", function(){
+		document.getElementById("-en").style.backgroundColor = "rgb(33,33,33)";
+	})
+	document.getElementById("-s").addEventListener("mouseenter", function(event) {
+		document.getElementById("-s").style.backgroundColor = "grey"
+		if(index >=0){
+			if(index != 8){
+				PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			}
+			index = -1;
+			console.log('set to default: ' + index);
+		}
+	});
+	document.getElementById("-s").addEventListener("mouseleave", function(){
+		document.getElementById("-s").style.backgroundColor = "rgb(33,33,33)";
+	})
+
 	
 });

@@ -33,9 +33,7 @@ body{
 .Gender_box:hover input{
 	background-color: white;
 }
-.Gender_box a:hover{
-	background-color: grey;
-}
+
 #Answer_box{
 	color: white;
 	background-color: rgb(24,24,24);
@@ -53,7 +51,7 @@ body{
 .Plural_box{
 	position: absolute;
     top: calc(60%);
-	left: calc(50% + 170px);
+	left: calc(50% + 178px);
     transform: translate(-50%, -50%);
 }
 #Plural_input{
@@ -84,7 +82,4 @@ body{
 .Plural_box:hover input{
 	background-color: white;
 	
-}
-.Plural_box a:hover{
-	background-color: grey;
 }
