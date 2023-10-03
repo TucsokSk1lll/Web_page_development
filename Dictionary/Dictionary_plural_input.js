@@ -1,50 +1,52 @@
+var clickedin_plural = false
+
 document.addEventListener("DOMContentLoaded", function() {
 	
 
 	document.getElementById("-").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Plural_input").value = "-"
-		console.log("-");
+		//console.log("-");
 	});
 	document.getElementById("Umlaut").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Plural_input").value = "Umlaut"
-		console.log("Umlaut");
+		//console.log("Umlaut");
 	});
 	document.getElementById("-e").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Plural_input").value = "-e"
-		console.log("-e");
+		//console.log("-e");
 	});
 	document.getElementById("Umlaut -e").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Plural_input").value = "Umlaut -e"
-		console.log("Umlaut -e");
+		//console.log("Umlaut -e");
 	});
 	document.getElementById("-er").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Plural_input").value = "-er"
-		console.log("-er");
+		//console.log("-er");
 	});
 	document.getElementById("Umlaut -er").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Plural_input").value = "Umlaut -er"
-		console.log("Umlaut -er");
+		//console.log("Umlaut -er");
 	});
 	document.getElementById("-n").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Plural_input").value = "-n"
-		console.log("-n");
+		//console.log("-n");
 	});
 	document.getElementById("-en").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Plural_input").value = "-en"
-		console.log("-en");
+		//console.log("-en");
 	});
 	document.getElementById("-s").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Plural_input").value = "-s"
-		console.log("-s");
+		//console.log("-s");
 	});
 
 
@@ -85,14 +87,22 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
-	document.querySelector(".Plural_box").addEventListener("click", function(event){
+	document.getElementById('Plural_input').addEventListener("click", function(event){
 
-		document.querySelector(".Plural_box .content").style.display = "block";
+		clickedin_plural = true
+		console.log(clickedin_plural)
+
+
+		document.querySelector(".plural_box .content").style.display = "block";
 		document.querySelector(".gender_box .content").style.display = "none";
 		event.stopPropagation();
 
 		document.querySelector(".Plural_box").addEventListener("keydown", Plural_box_arrows);	
 
+	});
+	document.getElementById('Plural_input').addEventListener("blur", function(event){
+		clickedin_plural = false
+		console.log(clickedin_plural)
 	});
 
 	document.addEventListener("click", function(event) {

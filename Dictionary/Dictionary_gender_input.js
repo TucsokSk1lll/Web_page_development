@@ -1,21 +1,23 @@
+var clickedin_gender = false
+
 document.addEventListener("DOMContentLoaded", function() {
 	
 
 	document.getElementById("Der").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Gender_input").value = "Der"
-		console.log("Der");
+		//console.log("Der");
 	});
 	document.getElementById("Die").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Gender_input").value = "Die"
-		console.log("Die");
+		//console.log("Die");
 	});
 	document.getElementById("Das").addEventListener("click", function(event) {
 		event.preventDefault();
 		document.getElementById("Gender_input").value = "Das"
-		console.log("Das");
-		document.querySelector(".gender_box .content").style.display = "none";
+		//console.log("Das");
+		
 	});
 
 	var index = -1;
@@ -46,19 +48,30 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 		if(event.key === "Enter" && Genderlist_string[index] !== undefined){
 			document.getElementById("Gender_input").value = Genderlist_string[index];
-			console.log(Genderlist_string[index])
+			//console.log(Genderlist_string[index])
 			document.querySelector(".gender_box .content").style.display = "none";
 		}
 	}
 
-	document.querySelector(".Gender_box").addEventListener("click", function(event){
+	document.getElementById('Gender_input').addEventListener("click", function(event){
+
+		clickedin_gender = true
+		console.log(clickedin_gender)
 
 		document.querySelector(".gender_box .content").style.display = "block";
+		document.getElementById('Der').style.display = 'block';
+		document.getElementById('Die').style.display = 'block';
+		document.getElementById('Das').style.display = 'block';
 		document.querySelector(".plural_box .content").style.display = "none";
 		event.stopPropagation();
 
 		document.querySelector(".Gender_box").addEventListener("keydown", Gender_box_arrows);	
 
+	});
+
+	document.getElementById('Gender_input').addEventListener("blur", function(event){
+		clickedin_gender = false
+		console.log(clickedin_gender)
 	});
 
 	document.addEventListener("click", function(event) {
