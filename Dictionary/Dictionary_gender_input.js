@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById('Gender_input').addEventListener("click", function(event){
 
 		clickedin_gender = true
-		console.log(clickedin_gender)
+		//console.log(clickedin_gender)
 
 		document.querySelector(".gender_box .content").style.display = "block";
 		document.getElementById('Der').style.display = 'block';
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	document.getElementById('Gender_input').addEventListener("blur", function(event){
 		clickedin_gender = false
-		console.log(clickedin_gender)
+		//console.log(clickedin_gender)
 	});
 
 	document.addEventListener("click", function(event) {

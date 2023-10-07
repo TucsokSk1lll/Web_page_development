@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById('Plural_input').addEventListener("click", function(event){
 
 		clickedin_plural = true
-		console.log(clickedin_plural)
+		//console.log(clickedin_plural)
 
 
 		document.querySelector(".plural_box .content").style.display = "block";
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 	document.getElementById('Plural_input').addEventListener("blur", function(event){
 		clickedin_plural = false
-		console.log(clickedin_plural)
+		//console.log(clickedin_plural)
 	});
 
 	document.addEventListener("click", function(event) {
