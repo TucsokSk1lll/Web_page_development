@@ -46,12 +46,19 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 			
 		}
-		if(event.key === "Enter" && Genderlist_string[index] !== undefined){
+		if(event.key === "Enter" || event.key === "Tab" && Genderlist_string[index] !== undefined){
 			document.getElementById("Gender_input").value = Genderlist_string[index];
 			//console.log(Genderlist_string[index])
 			document.querySelector(".gender_box .content").style.display = "none";
 		}
 	}
+
+	document.getElementById(('Gender_input')).addEventListener('keydown', function(event){
+		if(event.key === 'Tab'){
+			document.querySelector(".plural_box .content").style.display = "none";
+		}
+		
+	})
 
 	document.getElementById('Gender_input').addEventListener("click", function(event){
 
@@ -68,6 +75,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		document.querySelector(".Gender_box").addEventListener("keydown", Gender_box_arrows);	
 
 	});
+	document.getElementById('Gender_input').addEventListener('focus', function(event){
+		if (document.getElementById('Gender_input') && document.getElementById('Gender_input').id === 'Gender_input') {
+			clickedin_gender = true
+			document.querySelector(".gender_box .content").style.display = "block";
+			document.querySelector(".Gender_box").addEventListener("keydown", Gender_box_arrows);	
+		}
+	})
+
 
 	document.getElementById('Gender_input').addEventListener("blur", function(event){
 		clickedin_gender = false

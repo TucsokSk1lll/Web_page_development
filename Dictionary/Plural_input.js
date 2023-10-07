@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 			
 		}
-		if(event.key === "Enter" && Plurallist_string[index] !== undefined){
+		if(event.key === "Enter" || event.key === "Tab" && Plurallist_string[index] !== undefined){
 			document.getElementById("Plural_input").value = Plurallist_string[index];
 			console.log(Plurallist_string[index])
 			document.querySelector(".plural_box .content").style.display = "none";
@@ -100,6 +100,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		document.querySelector(".Plural_box").addEventListener("keydown", Plural_box_arrows);	
 
 	});
+	document.getElementById('Plural_input').addEventListener('focus', function(event){
+		if (document.getElementById('Plural_input') && document.getElementById('Plural_input').id === 'Plural_input') {
+			clickedin_plural = true
+			document.querySelector(".Plural_box .content").style.display = "block";
+			document.querySelector(".Plural_box").addEventListener("keydown", Plural_box_arrows);	
+			document.querySelector(".gender_box .content").style.display = "none";
+		}
+	})
 	document.getElementById('Plural_input').addEventListener("blur", function(event){
 		clickedin_plural = false
 		//console.log(clickedin_plural)
