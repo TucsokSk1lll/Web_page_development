@@ -1,9 +1,14 @@
 var Answer = document.getElementById("Answer_box").value;
+var lst_Answer = []
+
+
+
+console.log(lst_Answer)
 
 var clickedin_answer = false
 
 document.getElementById('Answer_box').addEventListener("click", function(event){
-
+		
 	clickedin_answer = true
 	//console.log(clickedin_answer)
 	
@@ -28,15 +33,6 @@ document.addEventListener('keydown', function(event){
 		}
 	}
 })
-Tabs = 0;
-document.addEventListener('keydown', function(event){
-	if(event.key === 'Tab' && Tabs < 3){
-		Tabs++;
-		//console.log(Tabs)
-	}
-	else{
-		Tabs = 1;
-		document.getElementById('focusResetElement').focus();
-		document.querySelector(".plural_box .content").style.display = "none";
-	}
-})
+
+
+

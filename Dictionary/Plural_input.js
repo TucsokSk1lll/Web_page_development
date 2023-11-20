@@ -80,12 +80,24 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 			
 		}
-		if(event.key === "Enter" || event.key === "Tab" && Plurallist_string[index] !== undefined){
+		if(event.key === "Enter"  && Plurallist_string[index] !== undefined){
 			document.getElementById("Plural_input").value = Plurallist_string[index];
 			console.log(Plurallist_string[index])
 			document.querySelector(".plural_box .content").style.display = "none";
+			PluralList[index].style.backgroundColor = "rgb(33,33,33)";
+			index = -1
+			console.log(Plurallist_string[index])
 		}
 	}
+
+	document.getElementById(('Plural_input')).addEventListener('keydown', function(event){
+		
+		if(event.key === "Enter"  && Plurallist_string[index] === undefined)
+		{
+			
+			clickedin_plural = false
+		}
+	})
 
 	document.getElementById('Plural_input').addEventListener("click", function(event){
 
@@ -109,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	})
 	document.getElementById('Plural_input').addEventListener("blur", function(event){
+		document.querySelector(".plural_box .content").style.display = "none";
 		clickedin_plural = false
 		//console.log(clickedin_plural)
 	});
@@ -124,8 +137,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			/*console.log('set to default: ' + index);*/
 		}
 
-		document.body.removeEventListener("click", Plural_box_arrows);
+		
 	})
+
 
 
 

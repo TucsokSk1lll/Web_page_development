@@ -1,6 +1,8 @@
 var clickedin_gender = false
 
 document.addEventListener("DOMContentLoaded", function() {
+
+	
 	
 
 	document.getElementById("Der").addEventListener("click", function(event) {
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			if(event.key === "ArrowDown" && index <= 1){
 				index += 1;
 				GenderList[index].style.backgroundColor = "grey";
-				/*console.log(index);*/
+				console.log(index);
 			}
 			if(event.key === "ArrowDown" && index >= 1){
 				GenderList[index-1].style.backgroundColor = "rgb(33,33,33)";
@@ -39,17 +41,20 @@ document.addEventListener("DOMContentLoaded", function() {
 			if(event.key === "ArrowUp" && index >= 1){
 				index -= 1;
 				GenderList[index].style.backgroundColor = "grey";
-				/*console.log(index);*/
+				console.log(index);
 			}
 			if(event.key === "ArrowUp" && index <= 1){
 				GenderList[index+1].style.backgroundColor = "rgb(33,33,33)";
 			}
 			
 		}
-		if(event.key === "Enter" || event.key === "Tab" && Genderlist_string[index] !== undefined){
+		document.getElementById('Gender_input').focus()
+		if(event.key === "Enter"  && Genderlist_string[index] !== undefined){
 			document.getElementById("Gender_input").value = Genderlist_string[index];
-			//console.log(Genderlist_string[index])
 			document.querySelector(".gender_box .content").style.display = "none";
+			GenderList[index].style.backgroundColor = "rgb(33,33,33)";
+			index = -1
+			console.log(Genderlist_string[index])
 		}
 	}
 
@@ -57,10 +62,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		if(event.key === 'Tab'){
 			document.querySelector(".plural_box .content").style.display = "none";
 		}
+		if(event.key === "Enter"  && Genderlist_string[index] === undefined)
+		{
+			clickedin_gender = false
+		}
 		
 	})
 
 	document.getElementById('Gender_input').addEventListener("click", function(event){
+
 
 		clickedin_gender = true
 		//console.log(clickedin_gender)
@@ -76,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	});
 	document.getElementById('Gender_input').addEventListener('focus', function(event){
-		if (document.getElementById('Gender_input') && document.getElementById('Gender_input').id === 'Gender_input') {
+		if (document.getElementById('Gender_input').id === 'Gender_input') {
 			clickedin_gender = true
 			document.querySelector(".gender_box .content").style.display = "block";
 			document.querySelector(".Gender_box").addEventListener("keydown", Gender_box_arrows);	
@@ -86,13 +96,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	document.getElementById('Gender_input').addEventListener("blur", function(event){
 		clickedin_gender = false
+		document.querySelector(".gender_box .content").style.display = "none";
 		//console.log(clickedin_gender)
 	});
 
 	document.addEventListener("click", function(event) {
 		document.querySelector(".Gender_box .content").style.display = "none";
 	});
-	document.body.addEventListener('click', function(event){
+	document.body.addEventListener('click', function(event){	0
 		
 		if(index !== -1 && GenderList[index]) {
 			GenderList[index].style.backgroundColor = "rgb(33,33,33)";
@@ -145,5 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("Das").addEventListener("mouseleave", function(){
 		document.getElementById("Das").style.backgroundColor = "rgb(33,33,33)";
 	})
+
+	
 	
 });
