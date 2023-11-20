@@ -1,10 +1,10 @@
 const Nouns = {
-'Alma': ['Der','Apfel','Umlaut'],
-'Kolbász': ['Die','Wurst','Umlaut -e'],
-'Asztal':['Der','Tisch','-e'],
-'Szék':['Der','Stuhl','Umlaut -e'],
-'Narancs':['Die', 'Orange','-n'],
-'Erdő':['Der','Wald','Umlaut -er'],
+	'Alma': ['Der','Apfel','Umlaut'],
+	'Kolbász': ['Die','Wurst','Umlaut -e'],
+	'Asztal':['Der','Tisch','-e'],
+	'Szék':['Der','Stuhl','Umlaut -e'],
+	'Narancs':['Die', 'Orange','-n'],
+	'Erdő':['Der','Wald','Umlaut -er'],
 };
 const Verbs = {
 	'Megy': ['gehen','geht','ging','ist','gegangen'],

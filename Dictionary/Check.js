@@ -10,13 +10,16 @@ document.getElementById('Word').textContent = Object.keys(Nouns)[randomszam_alap
 
 document.body.addEventListener('keydown', function(event){
 
-	if(event.key === 'Enter' && window.getComputedStyle(document.getElementById('Der')).display === 'none' && window.getComputedStyle(document.getElementById('-')).display === 'none'){
+	/*if(event.key === 'Enter' && window.getComputedStyle(document.getElementById("Der").parentElement).display === 'none' && window.getComputedStyle(document.getElementById("-").parentElement).display === 'none'){
 		checked_in = true
-		console.log('asdafefd')
-	}
+	}*/
 	
 	if(event.key === 'Enter' && clickedin_gender === false && 
-	clickedin_answer === false && clickedin_plural === false){
+	clickedin_answer === false && clickedin_plural === false && 
+	window.getComputedStyle(document.getElementById("Der").parentElement).display === 'none' &&
+	window.getComputedStyle(document.getElementById("-").parentElement).display === 'none'){
+
+		
 
 		if(checked_in === false){
 			checked_in = true
@@ -45,35 +48,39 @@ document.body.addEventListener('keydown', function(event){
 			console.log('nothing: ' + checked_in)
 		}
 
-
 		if(checked_in === true){
 
 			Answer = document.getElementById('Answer_box').value;
-			
-			for(i=0;i <= Answer.length;i++){
-				if(Answer[i] !== undefined){
-					lst_Answer.push(Answer[i])
+
+			if(Answer !== ''){
+
+				for(i=0;i <= Answer.length;i++){
+					if(Answer[i] !== undefined){
+						lst_Answer.push(Answer[i])
+					}
+					
 				}
+				console.log(lst_Answer)
 				
+				while(lst_Answer[0] === ' ' || lst_Answer[0] === undefined){
+					lst_Answer = lst_Answer.slice(1)
+				}
+				while(lst_Answer[lst_Answer.length-1] === ' ' || lst_Answer[lst_Answer.length-1] === undefined){
+					lst_Answer = lst_Answer.slice(0,-1)
+				}
+				console.log(lst_Answer)
+				
+				Answer = ''
+				for(i=0;i <= lst_Answer.length-1;i++){
+					Answer += lst_Answer[i]
+				}
+				Answer = Answer.toLowerCase();
+				Answer = Answer.charAt(0).toUpperCase() + Answer.slice(1);
+				console.log(Answer)
+				document.getElementById('Answer_box').value = Answer;
 			}
-			console.log(lst_Answer)
 			
-			while(lst_Answer[0] === ' ' || lst_Answer[0] === undefined){
-				lst_Answer = lst_Answer.slice(1)
-			}
-			while(lst_Answer[lst_Answer.length-1] === ' ' || lst_Answer[lst_Answer.length-1] === undefined){
-				lst_Answer = lst_Answer.slice(0,-1)
-			}
-			console.log(lst_Answer)
 			
-			Answer = ''
-			for(i=0;i <= lst_Answer.length-1;i++){
-				Answer += lst_Answer[i]
-			}
-			Answer = Answer.toLowerCase();
-			Answer = Answer.charAt(0).toUpperCase() + Answer.slice(1);
-			console.log(Answer)
-			document.getElementById('Answer_box').value = Answer;
 
 			var anyad = 0;
 
@@ -86,6 +93,7 @@ document.body.addEventListener('keydown', function(event){
 
 			if(Answer_box['Answer_box'][0] == Nouns[Word_list[randomszam]][0]){
 				document.getElementById('Gender_input').style.color = 'green';
+				
 			}
 			else {
 				document.getElementById('Gender_input').value = Nouns[Word_list[randomszam]][0];
@@ -118,8 +126,6 @@ document.body.addEventListener('keydown', function(event){
 				document.getElementById('Answer_box').value = '';
 				document.getElementById('Plural_input').value = '';
 		}
-		console.log(checked_in)
-		console.log('- - - - - - - - -')	
 		
 	}
 	
