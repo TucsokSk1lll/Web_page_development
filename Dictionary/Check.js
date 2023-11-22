@@ -1,10 +1,22 @@
 const Answer_box = {};
-var checked_in = false
-var randomszam_alap = getRandomInt(0,Hosszusag) 
+var checked_in = false 
 var randomszam ;
 
+if(NounorVerb === 'Noun'){
+	var randomszam_alap = getRandomInt(0,Noun_Hosszusag)
+}
+else{
+	var randomszam_alap = getRandomInt(0,Verb_Hosszusag)
+}
 
-document.getElementById('Word').textContent = Object.keys(Nouns)[randomszam_alap];
+
+if(NounorVerb === 'Noun'){
+	document.getElementById('Word').textContent = Object.keys(Nouns)[randomszam_alap];
+}
+else{
+	document.getElementById('Word').textContent = Object.keys(Verbs)[randomszam_alap];
+}
+
 
 
 
@@ -35,7 +47,7 @@ document.body.addEventListener('keydown', function(event){
 		//console.log(typeof randomszam_alap + ' ' + checked_in)
 
 		if(randomszam_alap === undefined && checked_in === false){
-			randomszam = getRandomInt(0,Hosszusag);
+			randomszam = getRandomInt(0,Noun_Hosszusag);
 			console.log('random szam (REGENERATED): '+randomszam)
 			document.getElementById('Word').textContent = Object.keys(Nouns)[randomszam];
 		}
@@ -91,28 +103,28 @@ document.body.addEventListener('keydown', function(event){
 			}
 			Answer_box['Answer_box'] = [document.getElementById('Gender_input').value,Answer,document.getElementById('Plural_input').value]
 
-			if(Answer_box['Answer_box'][0] == Nouns[Word_list[randomszam]][0]){
+			if(Answer_box['Answer_box'][0] == Nouns[Noun_list[randomszam]][0]){
 				document.getElementById('Gender_input').style.color = 'green';
 				
 			}
 			else {
-				document.getElementById('Gender_input').value = Nouns[Word_list[randomszam]][0];
+				document.getElementById('Gender_input').value = Nouns[Noun_list[randomszam]][0];
 				document.getElementById('Gender_input').style.color = 'red';
 			}
 
-			if(Answer_box['Answer_box'][1].toLowerCase() == Nouns[Word_list[randomszam]][1].toLowerCase()){
+			if(Answer_box['Answer_box'][1].toLowerCase() == Nouns[Noun_list[randomszam]][1].toLowerCase()){
 				document.getElementById('Answer_box').style.color = 'green';
 			}
 			else {
-				document.getElementById('Answer_box').value = Nouns[Word_list[randomszam]][1];
+				document.getElementById('Answer_box').value = Nouns[Noun_list[randomszam]][1];
 				document.getElementById('Answer_box').style.color = 'red';
 			}
 
-			if(Answer_box['Answer_box'][2] == Nouns[Word_list[randomszam]][2]){
+			if(Answer_box['Answer_box'][2] == Nouns[Noun_list[randomszam]][2]){
 				document.getElementById('Plural_input').style.color = 'green';
 			}
 			else {
-				document.getElementById('Plural_input').value = Nouns[Word_list[randomszam]][2];
+				document.getElementById('Plural_input').value = Nouns[Noun_list[randomszam]][2];
 				document.getElementById('Plural_input').style.color = 'red';
 			}
 			

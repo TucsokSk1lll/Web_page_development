@@ -1,10 +1,5 @@
 var Answer = document.getElementById("Answer_box").value;
 var lst_Answer = []
-
-
-
-console.log(lst_Answer)
-
 var clickedin_answer = false
 
 document.getElementById('Answer_box').addEventListener("click", function(event){
