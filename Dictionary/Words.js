@@ -45,3 +45,4 @@ else{
 console.log(NounorVerb)
 console.log(Noun_list)
 console.log(Verb_list)
+

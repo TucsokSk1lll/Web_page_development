@@ -122,7 +122,7 @@ if(NounorVerb === 'Noun'){
 			}
 		})
 		document.getElementById('Plural_input').addEventListener("blur", function(event){
-			document.querySelector(".plural_box .content").style.display = "none";
+			//document.querySelector(".plural_box .content").style.display = "none";
 			clickedin_plural = false
 			//console.log(clickedin_plural)
 		});

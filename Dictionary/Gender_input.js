@@ -1,8 +1,13 @@
 if(NounorVerb === 'Noun'){
 	var clickedin_gender = false
 
-	document.addEventListener("DOMContentLoaded", function() {
 	
+
+	document.addEventListener("DOMContentLoaded", function() {
+
+		
+		
+
 		document.getElementById("Der").addEventListener("click", function(event) {
 			event.preventDefault();
 			document.getElementById("Gender_input").value = "Der"
@@ -69,10 +74,7 @@ if(NounorVerb === 'Noun'){
 		})
 	
 		document.getElementById('Gender_input').addEventListener("click", function(event){
-	
-	
 			clickedin_gender = true
-			//console.log(clickedin_gender)
 	
 			document.querySelector(".gender_box .content").style.display = "block";
 			document.getElementById('Der').style.display = 'block';
@@ -95,9 +97,9 @@ if(NounorVerb === 'Noun'){
 	
 		document.getElementById('Gender_input').addEventListener("blur", function(event){
 			clickedin_gender = false
-			document.querySelector(".gender_box .content").style.display = "none";
+			//document.querySelector(".gender_box .content").style.display = "none";
 			//console.log(clickedin_gender)
-		});
+		})
 	
 		document.addEventListener("click", function(event) {
 			document.querySelector(".Gender_box .content").style.display = "none";
