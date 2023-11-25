@@ -1,7 +1,8 @@
+var clickedin_answer = false
 if(NounorVerb === 'Noun'){
 	var Answer = document.getElementById("Answer_box").value;
 	var lst_Answer = []
-	var clickedin_answer = false
+	
 
 	document.getElementById('Answer_box').style.display = 'block';
 

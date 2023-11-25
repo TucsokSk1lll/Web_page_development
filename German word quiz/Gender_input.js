@@ -1,10 +1,9 @@
-if(NounorVerb === 'Noun'){
-	var clickedin_gender = false
-
+var clickedin_gender = false
 	
 
+document.getElementById('Gender_input').style.display = 'none';
+
 	document.addEventListener("DOMContentLoaded", function() {
-		document.getElementById('Gender_input').style.display = 'block';
 		
 		
 
@@ -161,9 +160,7 @@ if(NounorVerb === 'Noun'){
 		
 		
 	});
+
 	
-}
-else{
-	document.getElementById('Gender_input').style.display = 'none';
-}
+
 

@@ -34,15 +34,6 @@ function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
 
-if(getRandomInt(1,100) <= Verb_Hosszusag/(Noun_Hosszusag+Verb_Hosszusag)*100){
-	NounorVerb = 'Verb'
-}
-else{
-	NounorVerb = 'Noun'
-}
-
-
-console.log(NounorVerb)
-console.log(Noun_list)
-console.log(Verb_list)
+//console.log(Noun_list)
+//console.log(Verb_list)
 

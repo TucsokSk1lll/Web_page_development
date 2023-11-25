@@ -1,6 +1,7 @@
-if(NounorVerb === 'Noun'){
-	var clickedin_plural = false
-	document.getElementById('Plural_input').style.display = 'block';
+var clickedin_plural = false
+
+	
+	document.getElementById('Plural_input').style.display = 'none';
 
 	document.addEventListener("DOMContentLoaded", function() {
 		
@@ -272,8 +273,3 @@ if(NounorVerb === 'Noun'){
 	
 		
 	});
-
-}
-else{
-	document.getElementById('Plural_input').style.display = 'none';
-}
