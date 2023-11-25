@@ -3,6 +3,8 @@ if(NounorVerb === 'Noun'){
 	var lst_Answer = []
 	var clickedin_answer = false
 
+	document.getElementById('Answer_box').style.display = 'block';
+
 	document.getElementById('Answer_box').addEventListener("click", function(event){
 			
 		clickedin_answer = true

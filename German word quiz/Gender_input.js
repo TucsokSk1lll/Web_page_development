@@ -4,7 +4,7 @@ if(NounorVerb === 'Noun'){
 	
 
 	document.addEventListener("DOMContentLoaded", function() {
-
+		document.getElementById('Gender_input').style.display = 'block';
 		
 		
 

@@ -1,5 +1,6 @@
 if(NounorVerb === 'Noun'){
 	var clickedin_plural = false
+	document.getElementById('Plural_input').style.display = 'block';
 
 	document.addEventListener("DOMContentLoaded", function() {
 		
