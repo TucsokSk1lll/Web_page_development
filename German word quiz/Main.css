@@ -90,3 +90,62 @@ body{
 	background-color: white;
 	
 }
+
+
+
+
+#Infinitiv_box{
+	color: white;
+	background-color: rgb(24,24,24);
+	position: absolute;
+	width: 200px; 
+	height: 50px; 
+	border-radius: 5px;
+	top: 60%;
+	left: calc(50% - 480px);
+	transform: translate(-50%, -50%);
+}
+#Präsens_box{
+	color: white;
+	background-color: rgb(24,24,24);
+	position: absolute;
+	width: 200px; 
+	height: 50px; 
+	border-radius: 5px;
+	top: 60%;
+	left: calc(50% - 240px);
+	transform: translate(-50%, -50%);
+}
+#Präteritum_box{
+	color: white;
+	background-color: rgb(24,24,24);
+	position: absolute;
+	width: 200px; 
+	height: 50px; 
+	border-radius: 5px;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#Isthat_box{
+	color: white;
+	background-color: rgb(24,24,24);
+	position: absolute;
+	width: 200px; 
+	height: 50px; 
+	border-radius: 5px;
+	top: 60%;
+	left: calc(50% + 240px);
+	transform: translate(-50%, -50%);
+}
+#Perfekt_box{
+	color: white;
+	background-color: rgb(24,24,24);
+	position: absolute;
+	width: 200px; 
+	height: 50px; 
+	border-radius: 5px;
+	top: 60%;
+	left: calc(50% + 480px);
+	transform: translate(-50%, -50%);
+}
