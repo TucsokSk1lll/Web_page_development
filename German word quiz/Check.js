@@ -256,30 +256,8 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 					document.getElementById('Gender_input').value = '';
 					document.getElementById('Answer_box').value = '';
 					document.getElementById('Plural_input').value = '';
-
-					document.getElementById('Infinitiv_box').style.color = 'white';
-					document.getElementById('Präsens_box').style.color = 'white';
-					document.getElementById('Präteritum_box').style.color = 'white';
-					document.getElementById('Isthat_box').style.color = 'white';
-					document.getElementById('Perfekt_box').style.color = 'white';
-					document.getElementById('Infinitiv_box').value = '';
-					document.getElementById('Präsens_box').value = '';
-					document.getElementById('Präteritum_box').value = '';
-					document.getElementById('Isthat_box').value = '';
-					document.getElementById('Perfekt_box').value = '';
-
-
-					document.getElementById('Wrong_answer').textContent = '';
-					document.getElementById('Wrong_gender').textContent = '';
-					document.getElementById('Wrong_plural').textContent = '';
-
-					document.getElementById('Wrong_infinitiv').textContent = '';
-					document.getElementById('Wrong_präsens').textContent = '';
-					document.getElementById('Wrong_präteritum').textContent = '';
-					document.getElementById('Wrong_isthat').textContent = '';
-					document.getElementById('Wrong_perfekt').textContent = '';
-					
 			}
+			console.log('- - - - - - - -')
 			
 		}
 		
