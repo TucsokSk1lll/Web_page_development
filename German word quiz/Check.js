@@ -1,23 +1,20 @@
+
 const Answer_box = {};
 var checked_in = false 
 var randomszam ;
 
 var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 
-	console.log('Random szam alap eredeti: '+randomszam_alap)
+	
 
 	if(randomszam_alap < Noun_Hosszusag){
-		console.log('Random szam alap modified: '+randomszam_alap)
 		document.getElementById('Word').textContent = Object.keys(Nouns)[randomszam_alap];
 		NounorVerb = 'Noun'
-		console.log(NounorVerb)
 	}
 	else{
 		randomszam_alap -= Noun_Hosszusag
-		console.log('Random szam alap modified: '+randomszam_alap)
 		document.getElementById('Word').textContent = Object.keys(Verbs)[randomszam_alap];
 		NounorVerb = 'Verb'
-		console.log(NounorVerb)
 	}
 	
 	if(NounorVerb === 'Noun'){
@@ -34,7 +31,8 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 	}
 
 	document.body.addEventListener('keydown', function(event){
-	
+
+
 		if((event.key === 'Enter' && clickedin_gender === false && 
 		clickedin_answer === false && clickedin_plural === false && 
 		window.getComputedStyle(document.getElementById("Der").parentElement).display === 'none' &&
@@ -44,25 +42,24 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 		clickedin_Präsens === false && clickedin_Präteritum === false &&
 		clickedin_Isthat === false && clickedin_Perfekt === false &&
 		window.getComputedStyle(document.getElementById("Answer_box")).display === 'none')){
-	
+			
 			if(checked_in === false){
 				checked_in = true
-				console.log('Checked in changed: '+checked_in)
 			}
 			else{
 				checked_in = false
-				console.log('Checked in changed: '+checked_in)	
 			}
 	
-			//random szám generálása ha checked in false és a szerint megváltozatni a Word-öt
-	
-			//console.log(typeof randomszam_alap + ' ' + checked_in)
-	
 			if(randomszam_alap === undefined && checked_in === false){
-				console.log(NounorVerb) 
 				randomszam = getRandomInt(0,Noun_Hosszusag+Verb_Hosszusag);
 				console.log('random szam (REGENERATED): '+randomszam)
 
+				if(randomszam_alap < Noun_Hosszusag){
+					NounorVerb = 'Noun'
+				}
+				else{
+					NounorVerb = 'Verb'
+				}
 
 
 				if(randomszam < Noun_Hosszusag){
@@ -84,10 +81,6 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 				else{
 					randomszam = randomszam - Noun_Hosszusag
 
-
-
-					console.log('!!!VERB!!!: ' + Object.keys(Verbs)[randomszam])
-
 					document.getElementById('Word').textContent = Object.keys(Verbs)[randomszam];
 
 					document.getElementById('Infinitiv_box').style.display = 'block';
@@ -106,10 +99,6 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 			else if(randomszam_alap != undefined && checked_in === true){
 				randomszam = randomszam_alap;
 				randomszam_alap = undefined;
-				console.log('random szam = random szam alap: ' + randomszam)
-			}
-			else{
-				console.log('nothing: ' + checked_in)
 			}
 	
 			if(checked_in === true){
@@ -125,7 +114,6 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 							}
 							
 						}
-						console.log(lst_Answer)
 						
 						while(lst_Answer[0] === ' ' || lst_Answer[0] === undefined){
 							lst_Answer = lst_Answer.slice(1)
@@ -133,7 +121,6 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 						while(lst_Answer[lst_Answer.length-1] === ' ' || lst_Answer[lst_Answer.length-1] === undefined){
 							lst_Answer = lst_Answer.slice(0,-1)
 						}
-						console.log(lst_Answer)
 						
 						Answer = ''
 						for(i=0;i <= lst_Answer.length-1;i++){
@@ -143,9 +130,12 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 						if(box === 'Answer_box'){
 							Answer = Answer.toLowerCase();
 							Answer = Answer.charAt(0).toUpperCase() + Answer.slice(1);
-							console.log(Answer)
 							document.getElementById(box).value = Answer;
-							console.log(Answer)
+						}
+						else{
+							Answer = Answer.toLowerCase();
+							//Answer = Answer.charAt(0).toUpperCase() + Answer.slice(1);
+							document.getElementById(box).value = Answer;
 						}
 						
 
@@ -154,19 +144,18 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 					return Answer;
 				}
 
-				Answer = NoSpaces(document.getElementById('Answer_box').value,'Answer_box')
 
-				console.log(document.getElementById('Infinitiv_box').value)
+				if(NounorVerb === 'Noun'){
+					Answer = NoSpaces(document.getElementById('Answer_box').value,'Answer_box')
+				}
+				else{
 
-				Answer_Infinitiv = NoSpaces(document.getElementById('Infinitiv_box').value,'Infinitiv_box')
-				Answer_Präsens = NoSpaces(document.getElementById('Präsens_box').value,'Präsens_box')
-				Answer_Präteritum = NoSpaces(document.getElementById('Präteritum_box').value,'Präteritum_box')
-				Answer_Isthat = NoSpaces(document.getElementById('Isthat_box').value,'Isthat_box')
-				Answer_Perfekt = NoSpaces(document.getElementById('Perfekt_box').value,'Perfekt_box')
-	
-				
-				
-
+					Answer_Infinitiv = NoSpaces(document.getElementById('Infinitiv_box').value,'Infinitiv_box')
+					Answer_Präsens = NoSpaces(document.getElementById('Präsens_box').value,'Präsens_box')
+					Answer_Präteritum = NoSpaces(document.getElementById('Präteritum_box').value,'Präteritum_box')
+					Answer_Isthat = NoSpaces(document.getElementById('Isthat_box').value,'Isthat_box')
+					Answer_Perfekt = NoSpaces(document.getElementById('Perfekt_box').value,'Perfekt_box')
+				}
 	
 				document.getElementById('focusResetElement').focus()
 	
@@ -176,21 +165,23 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 				if(window.getComputedStyle(document.getElementById("Answer_box")).display === 'block'){
 					Answer_box['Answer_box'] = [document.getElementById('Gender_input').value,Answer,document.getElementById('Plural_input').value]
 
-					console.log(Nouns[Noun_list[randomszam]][1] + ' ??? ' + Answer_box['Answer_box'][1])
-
 					if(Answer_box['Answer_box'][0] == Nouns[Noun_list[randomszam]][0]){
 						document.getElementById('Gender_input').style.color = 'green';
 						
 					}
 					else {
+						document.getElementById('Wrong_gender').style.display = 'block';
+						document.getElementById('Wrong_gender').innerText = Answer_box['Answer_box'][0];
 						document.getElementById('Gender_input').value = Nouns[Noun_list[randomszam]][0];
-						document.getElementById('Gender_input').style.color = 'red';
+						document.getElementById('Gender_input').style.color = 'red'; 
 					}
 		
 					if(Answer_box['Answer_box'][1].toLowerCase() == Nouns[Noun_list[randomszam]][1].toLowerCase()){
 						document.getElementById('Answer_box').style.color = 'green';
 					}
 					else {
+						document.getElementById('Wrong_answer').style.display = 'block';
+						document.getElementById('Wrong_answer').innerText = Answer_box['Answer_box'][1];
 						document.getElementById('Answer_box').value = Nouns[Noun_list[randomszam]][1];
 						document.getElementById('Answer_box').style.color = 'red';
 					}
@@ -199,6 +190,9 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 						document.getElementById('Plural_input').style.color = 'green';
 					}
 					else {
+						
+						document.getElementById('Wrong_plural').style.display = 'block';
+						document.getElementById('Wrong_plural').innerText = Answer_box['Answer_box'][2];
 						document.getElementById('Plural_input').value = Nouns[Noun_list[randomszam]][2];
 						document.getElementById('Plural_input').style.color = 'red';
 					}
@@ -210,6 +204,8 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 						document.getElementById('Infinitiv_box').style.color = 'green';
 						
 					}else{
+						document.getElementById('Wrong_infinitiv').style.display = 'block';
+						document.getElementById('Wrong_infinitiv').innerText = Answer_box['Answer_box'][0];
 						document.getElementById('Infinitiv_box').value = Verbs[Verb_list[randomszam]][0];
 						document.getElementById('Infinitiv_box').style.color = 'red';
 					}
@@ -217,6 +213,8 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 						document.getElementById('Präsens_box').style.color = 'green';
 						
 					}else{
+						document.getElementById('Wrong_präsens').style.display = 'block';
+						document.getElementById('Wrong_präsens').innerText = Answer_box['Answer_box'][1];
 						document.getElementById('Präsens_box').value = Verbs[Verb_list[randomszam]][1];
 						document.getElementById('Präsens_box').style.color = 'red';
 					}
@@ -224,6 +222,8 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 						document.getElementById('Präteritum_box').style.color = 'green';
 						
 					}else{
+						document.getElementById('Wrong_präteritum').style.display = 'block';
+						document.getElementById('Wrong_präteritum').innerText = Answer_box['Answer_box'][2];
 						document.getElementById('Präteritum_box').value = Verbs[Verb_list[randomszam]][2];
 						document.getElementById('Präteritum_box').style.color = 'red';
 					}
@@ -231,6 +231,8 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 						document.getElementById('Isthat_box').style.color = 'green';
 						
 					}else{
+						document.getElementById('Wrong_isthat').style.display = 'block';
+						document.getElementById('Wrong_isthat').innerText = Answer_box['Answer_box'][3];
 						document.getElementById('Isthat_box').value = Verbs[Verb_list[randomszam]][3];
 						document.getElementById('Isthat_box').style.color = 'red';
 					}
@@ -238,14 +240,14 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 						document.getElementById('Perfekt_box').style.color = 'green';
 						
 					}else{
+						document.getElementById('Wrong_perfekt').style.display = 'block';
+						document.getElementById('Wrong_perfekt').innerText = Answer_box['Answer_box'][4];
 						document.getElementById('Perfekt_box').value = Verbs[Verb_list[randomszam]][4];
 						document.getElementById('Perfekt_box').style.color = 'red';
 					}
 				}
-	
-				
-				
 			}
+
 			if(checked_in === false){
 					//document.getElementById('Word').textContent = Object.keys(Nouns)[randomszam];
 					document.getElementById('Plural_input').style.color = 'white';
@@ -254,8 +256,30 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 					document.getElementById('Gender_input').value = '';
 					document.getElementById('Answer_box').value = '';
 					document.getElementById('Plural_input').value = '';
+
+					document.getElementById('Infinitiv_box').style.color = 'white';
+					document.getElementById('Präsens_box').style.color = 'white';
+					document.getElementById('Präteritum_box').style.color = 'white';
+					document.getElementById('Isthat_box').style.color = 'white';
+					document.getElementById('Perfekt_box').style.color = 'white';
+					document.getElementById('Infinitiv_box').value = '';
+					document.getElementById('Präsens_box').value = '';
+					document.getElementById('Präteritum_box').value = '';
+					document.getElementById('Isthat_box').value = '';
+					document.getElementById('Perfekt_box').value = '';
+
+
+					document.getElementById('Wrong_answer').textContent = '';
+					document.getElementById('Wrong_gender').textContent = '';
+					document.getElementById('Wrong_plural').textContent = '';
+
+					document.getElementById('Wrong_infinitiv').textContent = '';
+					document.getElementById('Wrong_präsens').textContent = '';
+					document.getElementById('Wrong_präteritum').textContent = '';
+					document.getElementById('Wrong_isthat').textContent = '';
+					document.getElementById('Wrong_perfekt').textContent = '';
+					
 			}
-			console.log('- - - - - - - -')
 			
 		}
 		

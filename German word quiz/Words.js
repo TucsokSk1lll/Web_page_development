@@ -1,14 +1,33 @@
 const Nouns = {
 	'Alma': ['Der','Apfel','Umlaut'],
 	'Kolbász': ['Die','Wurst','Umlaut -e'],
-	/*'Asztal':['Der','Tisch','-e'],
+	'Asztal':['Der','Tisch','-e'],
 	'Szék':['Der','Stuhl','Umlaut -e'],
 	'Narancs':['Die', 'Orange','-n'],
-	'Erdő':['Der','Wald','Umlaut -er'],*/
+	'Erdő':['Der','Wald','Umlaut -er'],
 };
 const Verbs = {
-	'Megy': ['gehen','geht','ging','ist','gegangen'],
-	'Alszik': ['schlafen','schläft','schlief','hat','geschlafen']
+	iszik: ['trinken','trinkt','trank','hat','getrunken'],
+	tesz: ['tun','tut','tat','hat','getan'],
+	közvetít: ['übertragen','überträgt','übertrug','hat','übertragen'],
+	átutal: ['überweisen','überweist','überwies','hat','überwiesen'],
+	átszáll: ['umsteigen','steigt um','stieg um','ist','umgestiegen'],
+	átöltözik: ['umziehen','zieht um','zog um','ist','umgezogen'],
+	/*beszélget: ['unterhalten','unterhält','unterhielt','hat','unterhalten'],
+	vállalkozik: ['unternehmen','unternimmt','unternahm','hat','unternommen'],
+	aláír: ['unterschreiben','unterschreibt','unterschrieb','hat','unterschrieben'],
+	eltölt: ['verbringen','verbringt','verbrachte','hat','verbracht'],
+	elfelejt: ['vergessen','vergisst','vergaß','hat','vergessen'],
+	összehasonlít: ['vergleichen','vergleicht','verglich','hat','verglichen'],
+	elveszít: ['verlieren','verliert','verlor','hat','verloren'],
+	elhalaszt: ['verschieben','verschiebt','verschob','hat','verschoben'],
+	eltűnik: ['verschwinden','verschwindet','verschwand','ist','verschwunden'],
+	megígér: ['versprechen','verspricht','versprach','hat','versprochen'],
+	javasol: ['vorschlagen','schlägt vor','schlug vor','hat','vorgeschlagen'],
+	bemutat: ['vorstellen','stellt vor','stellte vor','hat','vorgestellt'],
+	nő: ['wachsen','wächst','wuchs','ist','gewachsen'],*/
+
+
 }
 
 var Noun_Hosszusag = 0;
