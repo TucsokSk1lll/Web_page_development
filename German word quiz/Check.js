@@ -258,7 +258,6 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 					document.getElementById('Plural_input').value = '';
 			}
 			console.log('- - - - - - - -')
-			
 		}
 		
 	})
