@@ -24,6 +24,70 @@ body{
 	cursor: pointer;
 	font-size: auto;
 }
+#Noun_button{
+	display: none;
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
+	background-color: rgb(24,24,24);
+	color: 	white;
+	padding: 5px;
+	cursor: pointer;
+	font-size: auto;
+
+}
+#Verb_button{
+	display: none;
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
+	background-color: rgb(24,24,24);
+	color: 	white;
+	padding: 5px;
+	cursor: pointer;
+	font-size: auto;
+
+}
+#Create_button{
+	display: inline;
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
+	background-color: rgb(24,24,24);
+	color: 	white;
+	padding: 5px;
+	cursor: pointer;
+	font-size: auto;
+	position: absolute;
+	top: calc(60% - 80px);
+	left: calc(50% - 150px);
+	transform: translate(-50%, -50%);
+
+}
+#Dictionary_name_box{
+	display: inline;
+	color: white;
+	background-color: rgb(24,24,24);
+	position: absolute;
+	width: 200px; 
+	height: 50px; 
+	border-radius: 5px;
+	top: calc(60% - 80px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#Word_box{
+	display: none;
+	color: white;
+	background-color: rgb(24,24,24);
+	position: absolute;
+	width: 200px; 
+	height: 50px; 
+	border-radius: 5px;
+	top: calc(60% - 80px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 .Gender_box a{
 	display: block;
 	color: white;

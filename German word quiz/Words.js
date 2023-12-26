@@ -7,27 +7,20 @@ const Nouns = {
 	'Erdő':['Der','Wald','Umlaut -er'],
 };
 const Verbs = {
-	iszik: ['trinken','trinkt','trank','hat','getrunken'],
-	tesz: ['tun','tut','tat','hat','getan'],
-	közvetít: ['übertragen','überträgt','übertrug','hat','übertragen'],
-	átutal: ['überweisen','überweist','überwies','hat','überwiesen'],
-	átszáll: ['umsteigen','steigt um','stieg um','ist','umgestiegen'],
-	átöltözik: ['umziehen','zieht um','zog um','ist','umgezogen'],
-	/*beszélget: ['unterhalten','unterhält','unterhielt','hat','unterhalten'],
-	vállalkozik: ['unternehmen','unternimmt','unternahm','hat','unternommen'],
-	aláír: ['unterschreiben','unterschreibt','unterschrieb','hat','unterschrieben'],
-	eltölt: ['verbringen','verbringt','verbrachte','hat','verbracht'],
-	elfelejt: ['vergessen','vergisst','vergaß','hat','vergessen'],
-	összehasonlít: ['vergleichen','vergleicht','verglich','hat','verglichen'],
-	elveszít: ['verlieren','verliert','verlor','hat','verloren'],
-	elhalaszt: ['verschieben','verschiebt','verschob','hat','verschoben'],
-	eltűnik: ['verschwinden','verschwindet','verschwand','ist','verschwunden'],
-	megígér: ['versprechen','verspricht','versprach','hat','versprochen'],
-	javasol: ['vorschlagen','schlägt vor','schlug vor','hat','vorgeschlagen'],
-	bemutat: ['vorstellen','stellt vor','stellte vor','hat','vorgestellt'],
-	nő: ['wachsen','wächst','wuchs','ist','gewachsen'],*/
-
-
+	/*'megígér': ['versprechen','verspricht','versprach','hat','versprochen'],
+	'megért': ['verstehen','versteht','verstand','hat','verstanden'],
+	'javasol': ['vorschlagen','schlägt vor','schlug vor','hat','vorgeschlagen'],
+	'bemutat(kozik)': ['vorstellen','stellt vor','stellte vor','hat','vorgestellt'],
+	'mos': ['waschen','wäscht','wusch','hat','gewaschen'],
+	'elmegy': ['weggehen','geht weg','ging weg','ist','weggegangen'],
+	'eldob': ['wegwerfen','wirft weg','warf weg','hat','weggeworfen'],
+	'fáj': ['wehtun','tut weh','tat weh','hat','wehgetan'],
+	'válik valamivé': ['werden','wird','wurde','ist','geworden'],
+	'dob': ['werfen','wirft','warf','hat','geworfen'],
+	'tud': ['wissen','weiß','wusste','hat','gewusst'],
+	'húz': ['ziehen','zieht','zog','hat','gezogen'],
+	'boldogul': ['zurechtkommen','kommt zurecht','kam zurecht','ist','zurechtgekommen'],
+	'visszajön': ['zurückkommen','kommt zurück','kam zurück','ist','zurückgekommen'],*/
 }
 
 var Noun_Hosszusag = 0;

@@ -241,6 +241,8 @@ var randomszam_alap = getRandomInt(0,Noun_Hosszusag + Verb_Hosszusag)
 						document.getElementById('Perfekt_box').style.color = 'green';
 						
 					}else{
+						console.log(Answer_box['Answer_box'][4])
+						console.log(Verbs[Verb_list[randomszam]][4])
 						document.getElementById('Wrong_perfekt').style.display = 'block';
 						document.getElementById('Wrong_perfekt').innerText = Answer_box['Answer_box'][4];
 						document.getElementById('Perfekt_box').value = Verbs[Verb_list[randomszam]][4];
