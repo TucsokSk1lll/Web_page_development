@@ -6,6 +6,16 @@
 	<title>Document</title>
 </head>
 <body>
-	<h1>Hello World!</h1>
+	<p id="p">asd</p>
+	<input type="text" id="xd" >
+	<button id="ok">ok</button>
 </body>
+<script>
+	document.getElementById('p').innerHTML = localStorage.getItem('keyname');
+	document.getElementById('ok').addEventListener('click', function(){
+		localStorage.setItem('keyname', document.getElementById('xd').value);
+		document.getElementById('p').innerHTML = localStorage.getItem('keyname');
+	});
+	
+</script>
 </html>
