@@ -8,12 +8,14 @@
 	</style>
 </head>
 <body>
-	<button id="Noun_button">Noun</button>
-	<button id="Verb_button">Verb</button>
+	<div id="focusResetElement" tabindex="-1"></div>
+	
+	<button id="Noun_button"tabindex="1">Noun</button>
+	<button id="Verb_button"tabindex="2">Verb</button>
 	<button id="Create_button">Create</button>
 
 	<input id="Dictionary_name_box" type="text" placeholder="Name of the new Dictionary"></input>
-	<Input id="Word_box" type="text" placeholder="Word in your native"></Input>
+	<Input id="Word_box" type="text" placeholder="Word in your native"tabindex="3"></Input>
 
 	<div class="Gender_box" readonly="readonly" placeholder="Gender"></Input>
 		<input id="Gender_input" readonly="readonly" placeholder="Gender"></input>
@@ -49,4 +51,13 @@
 </body>
 
 <script src="Input.js"></script>
+<script src="Gender_input.js"></script>
+<script src="Plural_input.js"></script>
+<script src="Answer.js"></script>
+
+<script src="Infinitiv.js"></script>
+<script src="Präsens.js"></script>
+<script src="Präteritum.js"></script>
+<script src="Isthat.js"></script>
+<script src="Perfekt.js"></script>
 </html>
